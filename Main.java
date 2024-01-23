@@ -15,7 +15,14 @@ public class Main {
 		programacion.addRegistro(r3);
 		programacion.addRegistro(r2);
 		programacion.addRegistro(r1);
-		
+
+		System.out.println("Asistencias:");
 		System.out.println(programacion.getAsistencias());
+
+		System.out.println("Ausencias:");
+		System.out.println(programacion.getAusencias());
+
+		System.out.println("Presencia stática:");
+		ControlPresencia.printPresencia(new ControlPresencia<>(3,new Alumno("Marta","1DAM"),false));
 	}
 }

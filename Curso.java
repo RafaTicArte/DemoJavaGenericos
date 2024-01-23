@@ -22,4 +22,14 @@ public class Curso {
 		}
 		return asistencias;
 	}
+
+	public ArrayList<ControlPresencia> getAusencias(){
+		ArrayList<ControlPresencia> ausencias = new ArrayList();
+		for(ControlPresencia registro: registros) {
+			if(!registro.getAsiste()) {
+				ausencias.add(registro);
+			}
+		}
+		return ausencias;
+	}
 }

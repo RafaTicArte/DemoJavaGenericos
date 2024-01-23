@@ -34,8 +34,12 @@ public class ControlPresencia<T> {
 		this.asiste = asiste;
 	}
 
+	static <T> void printPresencia(ControlPresencia<T> presencia) {
+		System.out.println(presencia);
+	}
+
 	@Override
 	public String toString() {
-		return "Asistencia [codigo=" + codigo + ", persona=" + persona + ", asiste=" + asiste + "]\n";
+		return "Presencia: [" + codigo + ". " + persona + " - Asiste=" + asiste + "]\n";
 	}
 }
