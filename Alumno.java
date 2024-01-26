@@ -1,6 +1,6 @@
 package DemoJavaGenericos;
 
-public class Alumno {
+public class Alumno implements IControlPresencia {
 	private String nombre;
 	private String curso;
 	

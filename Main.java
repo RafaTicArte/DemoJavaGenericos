@@ -8,6 +8,8 @@ public class Main {
 		ControlPresencia<Alumno> r3 = new ControlPresencia<>(3,new Alumno("Marta","1DAM"),false);
 		ControlPresencia<Profesor> r4 = new ControlPresencia<>(4,new Profesor("Rafa","Informática"),true);
 		ControlPresencia<Profesor> r5 = new ControlPresencia<>(5,new Profesor("Carlos","Informática"),false);
+		// No se podría definir el siguiente objeto porque "String" no implementa el interfaz IControlPresencia
+		//ControlPresencia<String> r6 = new ControlPresencia<>(5, "Ejemplo", false);
 		
 		Curso programacion = new Curso();
 		programacion.addRegistro(r5);

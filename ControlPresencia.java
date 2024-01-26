@@ -1,6 +1,6 @@
 package DemoJavaGenericos;
 
-public class ControlPresencia<T> {
+public class ControlPresencia<T extends IControlPresencia> {
 	private int codigo;
 	private T persona;
 	private boolean asiste;
@@ -34,7 +34,7 @@ public class ControlPresencia<T> {
 		this.asiste = asiste;
 	}
 
-	static <T> void printPresencia(ControlPresencia<T> presencia) {
+	static <T extends IControlPresencia> void printPresencia(ControlPresencia<T> presencia) {
 		System.out.println(presencia);
 	}
 
@@ -42,4 +42,7 @@ public class ControlPresencia<T> {
 	public String toString() {
 		return "Presencia: [" + codigo + ". " + persona + " - Asiste=" + asiste + "]\n";
 	}
+}
+
+interface IControlPresencia {
 }
